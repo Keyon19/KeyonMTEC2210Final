@@ -8,7 +8,7 @@ public class playerMovement : MonoBehaviour
     public float speed = 5.0f;
     void Update()
     {
-        float xMove = Input.GetAxis("Horizontal");
+        float xMove = Input.GetAxisRaw("Horizontal");
     
         float xMovement = xMove * speed * Time.deltaTime;
 
