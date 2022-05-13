@@ -7,6 +7,7 @@ public class gameManager : MonoBehaviour
     public GameObject[] enemyPrefab;
     public Transform[] spawnPoints;
     public Transform bulletSpawn;
+    public GameObject bulletPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,10 @@ public class gameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            spawnBullet();
+        }
 
     }
 
@@ -35,7 +40,12 @@ public class gameManager : MonoBehaviour
         enemies.GetComponent<enemyMovement>().speed = Random.Range(-2.0f, -6.0f);
     }
 
-
+    void spawnBullet()
+    {
+        Vector3 spawnPositions = bulletSpawn.position;
+        GameObject bullet = Instantiate(bulletPrefab, spawnPositions , Quaternion.identity);
+        bullet.GetComponent<bulletMovement>().speed = 5.0f;
+    }
 
 }
 
