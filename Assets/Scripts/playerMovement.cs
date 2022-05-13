@@ -13,5 +13,6 @@ public class playerMovement : MonoBehaviour
         float xMovement = xMove * speed * Time.deltaTime;
 
         transform.Translate(xMovement, 0, 0);
+
     }
 }
