@@ -11,4 +11,17 @@ public class enemyMovement : MonoBehaviour
         float yValue = speed * Time.deltaTime;
         transform.Translate(0, yValue, 0);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "destroyWall")
+        {
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "bullet")
+        {
+            Destroy(gameObject);
+        }
+    }
 }
