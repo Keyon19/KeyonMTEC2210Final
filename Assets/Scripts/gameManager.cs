@@ -6,6 +6,7 @@ public class gameManager : MonoBehaviour
 {
     public GameObject[] enemyPrefab;
     public Transform[] spawnPoints;
+    public Transform bulletSpawn;
 
     // Start is called before the first frame update
     void Start()
