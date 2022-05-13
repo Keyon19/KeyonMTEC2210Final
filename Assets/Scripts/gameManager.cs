@@ -25,12 +25,6 @@ public class gameManager : MonoBehaviour
             spawnBullet();
         }
 
-        if (Input.GetKeyDown(KeyCode.KeypadEnter))
-        {
-            SceneManager.LoadScene("mainScene");
-        }
-
-
     }
 
 
