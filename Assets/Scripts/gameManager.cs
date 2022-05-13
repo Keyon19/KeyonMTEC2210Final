@@ -37,7 +37,7 @@ public class gameManager : MonoBehaviour
 
         GameObject enemies = Instantiate(enemyPrefab[enemyIndex], spawnPositions, Quaternion.identity);
 
-        enemies.GetComponent<enemyMovement>().speed = Random.Range(-2.0f, -6.0f);
+        enemies.GetComponent<enemyMovement>().speed = Random.Range(-3.0f, -6.0f);
     }
 
     void spawnBullet()
