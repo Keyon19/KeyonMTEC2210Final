@@ -10,7 +10,7 @@ public class gameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spawnEnemies();
+        InvokeRepeating("spawnEnemies", 3, 2);
     }
 
 
@@ -24,12 +24,14 @@ public class gameManager : MonoBehaviour
     void spawnEnemies()
     {
         int index = Random.Range(0, spawnPoints.Length);
+        
         Vector3 spawnPositions = spawnPoints[index].position;
+        
         int enemyIndex = Random.Range(0, enemyPrefab.Length);
 
         GameObject enemies = Instantiate(enemyPrefab[enemyIndex], spawnPositions, Quaternion.identity);
 
-        enemies.GetComponent<enemyMovement>().speed = Random.Range(-3.0f, -6.0f);
+        enemies.GetComponent<enemyMovement>().speed = Random.Range(-2.0f, -6.0f);
     }
 
 
