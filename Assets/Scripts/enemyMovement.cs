@@ -24,7 +24,7 @@ public class enemyMovement : MonoBehaviour
         if (collision.gameObject.tag == "bullet")
         {
             Destroy(gameObject);
-
+            scoreCounter.Instance.addPoints();
         }
     }
 }

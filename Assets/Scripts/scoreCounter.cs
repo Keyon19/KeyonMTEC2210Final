@@ -5,11 +5,19 @@ using TMPro;
 
 public class scoreCounter : MonoBehaviour
 {
+    public static scoreCounter Instance;
+    public TextMeshPro scoreText;
 
-    // Start is called before the first frame update
+    int score = 0000;
+
+    private void Awake()
+    {
+        Instance = this; 
+    }
+
     void Start()
     {
-
+        scoreText.text = score.ToString();
     }
 
     // Update is called once per frame
@@ -18,5 +26,9 @@ public class scoreCounter : MonoBehaviour
 
     }
 
-    
+    public void addPoints()
+    {
+        score += 10;
+        scoreText.text = score.ToString();
+    }
 }
