@@ -19,35 +19,35 @@ public class bulletMovement : MonoBehaviour
             Destroy(gameObject);
         }
         /*
-                if (collision.gameObject.name == "enemy01(clone)")
+                if (collision.gameObject.name == "enemy01")
                 {
                     Destroy(gameObject);
                     scoreCounter.Instance.addPoints1();
                 }
 
-                if (collision.gameObject.name == "enemy02(clone)")
+                if (collision.gameObject.name == "enemy02")
                 {
                     Destroy(gameObject);
                     scoreCounter.Instance.addPoints2();
                 }
-                if (collision.gameObject.name == "enemy03(clone)")
+                if (collision.gameObject.name == "enemy03")
                 {
                     Destroy(gameObject);
                     scoreCounter.Instance.addPoints3();
                 }
 
-                if (collision.gameObject.name == "enemy04(clone)")
+                if (collision.gameObject.name == "enemy04")
                 {
                     Destroy(gameObject);
                     scoreCounter.Instance.addPoints4();
                 }
-                if (collision.gameObject.name == "enemy05(clone)")
+                if (collision.gameObject.name == "enemy05")
                 {
                     Destroy(gameObject);
                     scoreCounter.Instance.addPoints5();
                 }
 
-                if (collision.gameObject.name == "ufo(clone)")
+                if (collision.gameObject.name == "ufo")
                 {
                     Destroy(gameObject);
                     scoreCounter.Instance.addPointsufo();

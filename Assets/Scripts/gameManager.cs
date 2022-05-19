@@ -10,12 +10,12 @@ public class gameManager : MonoBehaviour
     public Transform[] spawnPoints;
     public Transform bulletSpawn;
     public GameObject bulletPrefab;
-
+    public AudioSource bulletSound;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        bulletSound = GetComponent<AudioSource>();
         InvokeRepeating("spawnEnemies", 3, 2);
     }
 
@@ -27,7 +27,10 @@ public class gameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             spawnBullet();
+            bulletSound.Play();
         }
+
+
 
     }
 
@@ -39,6 +42,7 @@ public class gameManager : MonoBehaviour
         int enemyIndex = Random.Range(0, enemyPrefab.Length);
         GameObject enemies = Instantiate(enemyPrefab[enemyIndex], spawnPositions, Quaternion.identity);
         enemies.GetComponent<enemyMovement>().speed = Random.Range(-3.0f, -6.0f);
+
     }
 
     void spawnBullet()
