@@ -18,6 +18,10 @@ public class bulletMovement : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (collision.gameObject.tag == "enemy")
+        {
+            Destroy(gameObject);
+        }
         /*
                 if (collision.gameObject.name == "enemy01")
                 {
@@ -53,7 +57,7 @@ public class bulletMovement : MonoBehaviour
                     scoreCounter.Instance.addPointsufo();
                 }
         */
-        
+
     }
 }
 
