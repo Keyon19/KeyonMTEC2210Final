@@ -30,7 +30,6 @@ public class playerMovement : MonoBehaviour
         {
             Destroy(gameObject);
             SceneManager.LoadScene("mainScene");
-       
         }
 
     }
