@@ -13,7 +13,14 @@ public class playerMovement : MonoBehaviour
     
         float xMovement = xMove * speed * Time.deltaTime;
 
-        transform.Translate(xMovement, 0, 0);
+        if (Input.GetKey(KeyCode.RightShift))
+        {
+            transform.Translate(xMovement * 4, 0, 0);
+        } else
+        {
+            transform.Translate(xMovement, 0, 0);
+
+        }
 
     }
 
@@ -27,4 +34,5 @@ public class playerMovement : MonoBehaviour
         }
 
     }
+
 }

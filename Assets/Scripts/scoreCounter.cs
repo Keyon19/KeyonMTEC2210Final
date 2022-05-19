@@ -28,10 +28,10 @@ public class scoreCounter : MonoBehaviour
 
     public void addPoints1()
     {
-        score += 10;
+        score += 100;
         scoreText.text = score.ToString();
     }
-    public void addPoints2()
+    /*public void addPoints2()
     {
         score += 20;
         scoreText.text = score.ToString();
@@ -56,12 +56,13 @@ public class scoreCounter : MonoBehaviour
         score += 100;
         scoreText.text = score.ToString();
     }
+    */
 
 
 
     public void subtractPoints()
     {
-        score -= 10;
+        score -= 50;
         scoreText.text = score.ToString();
     }
 }
