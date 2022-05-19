@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class enemyMovement : MonoBehaviour
 {
+
 
     public float speed = 5;
     void Update()
@@ -22,6 +24,7 @@ public class enemyMovement : MonoBehaviour
         if (collision.gameObject.tag == "bullet")
         {
             Destroy(gameObject);
+
         }
     }
 }
