@@ -19,12 +19,14 @@ public class enemyMovement : MonoBehaviour
         if (collision.gameObject.tag == "destroyWall")
         {
             Destroy(gameObject);
+            scoreCounter.Instance.subtractPoints();
         }
 
         if (collision.gameObject.tag == "bullet")
         {
             Destroy(gameObject);
-            scoreCounter.Instance.addPoints();
+            scoreCounter.Instance.addPoints1();
+
         }
     }
 }
