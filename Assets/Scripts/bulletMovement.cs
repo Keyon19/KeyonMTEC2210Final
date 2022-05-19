@@ -56,7 +56,7 @@ public class bulletMovement : MonoBehaviour
                     Destroy(gameObject);
                     scoreCounter.Instance.addPointsufo();
                 }
-        */
+                */
 
     }
 }
